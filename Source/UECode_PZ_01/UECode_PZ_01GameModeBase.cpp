@@ -15,7 +15,10 @@ void  AUECode_PZ_01GameModeBase::BeginPlay()
 	{
 		float FloatValue = FloatProp->GetPropertyValue_InContainer(this);
 		UE_LOG(LogTemp, Warning, TEXT("Float equals - %f"), FloatValue);
-		FloatProp->SetPropertyValue_InContainer(this, 48);
+
+		FloatProp->SetPropertyValue_InContainer(this, 48.0f);
+
+		FloatValue = FloatProp->GetPropertyValue_InContainer(this);
 		UE_LOG(LogTemp, Warning, TEXT("Float equals - %f"), FloatValue);
 	}
 }
